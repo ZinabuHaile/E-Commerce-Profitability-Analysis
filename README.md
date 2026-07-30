@@ -1,7 +1,7 @@
 # 🛒 BrightCart: E-Commerce Profitability & Marketing Analytics
 
 ## Project Link
-This project is based on the AnalystBuilder E-Commerce Profitability Analysis
+This project is based on the AnalystBuilder E-Commerce Profitability Analysis Projects
 [![AnalystBuilder E-Commerce Profitability Analysis Project](images/analystbuilder.png)](https://www.analystbuilder.com/projects/e-commerce-profitability-analysis-KvrTi?tab=details) challenge.
 
 
