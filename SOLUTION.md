@@ -16,7 +16,7 @@ This guide provides a complete, step-by-step walkthrough of BrightCart's profita
 
 ---
 
-## 1. Data Model Overview
+## Data Model Overview
 
 The analysis relies on five core tables in the MySQL database:
 
@@ -29,7 +29,7 @@ The analysis relies on five core tables in the MySQL database:
 
 ---
 
-## Step 1: Database & Schema Setup
+## 1: Database & Schema Setup
 Execute the DDL below to set up tables in MySQL and import the datasets.
 
 ```sql
@@ -86,3 +86,6 @@ CREATE TABLE IF NOT EXISTS marketing_spend (
     cpa DECIMAL(10,2),
     roas DECIMAL(10,2)
 );
+
+## Step 1: Data Integrity & Verification
+Before running aggregations, verify that cost, revenue, and profit metrics align with standard formula logic across all order rows:$$\text{Total Costs} = \text{Product Cost} + \text{Shipping Cost} + \text{Platform Fee} + \text{Transaction Fee}$$$$\text{Net Revenue} = \text{Gross Revenue} - \text{Discount Amount} - \text{Refund Amount}$$$$\text{Profit} = \text{Net Revenue} - \text{Total Costs}$$
