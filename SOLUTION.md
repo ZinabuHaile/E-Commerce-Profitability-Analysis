@@ -86,6 +86,16 @@ CREATE TABLE IF NOT EXISTS marketing_spend (
     cpa DECIMAL(10,2),
     roas DECIMAL(10,2)
 );
+---
+
 
 ## Step 1: Data Integrity & Verification
-Before running aggregations, verify that cost, revenue, and profit metrics align with standard formula logic across all order rows:$$\text{Total Costs} = \text{Product Cost} + \text{Shipping Cost} + \text{Platform Fee} + \text{Transaction Fee}$$$$\text{Net Revenue} = \text{Gross Revenue} - \text{Discount Amount} - \text{Refund Amount}$$$$\text{Profit} = \text{Net Revenue} - \text{Total Costs}$$
+Before running aggregations, verify that cost, revenue, and profit metrics align with standard \ formula logic across all order rows:
+```
+**Total Costs** = Product Cost + Shipping Cost + Platform Fee + Transaction Fee
+
+**Net Revenue** = Gross Revenue - Discount Amount - Refund Amount
+
+**Profit** = Net Revenue - Total Costs
+
+
