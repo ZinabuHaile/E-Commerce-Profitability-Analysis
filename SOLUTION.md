@@ -26,15 +26,15 @@ This guide provides a complete, step-by-step walkthrough of BrightCart's profita
 
 ## Data Model Overview
 
-The analysis relies on five core tables in the MySQL database:
+The analysis relies on three core tables in the MySQL database:
 
 | Table | Description |
 | :--- | :--- |
-| `orders` | Transaction details (`order_id`, `customer_id`, `order_date`, `shipping_cost_charged`, `shipping_cost_actual`) |
-| `products` | Product catalog & costs (`product_id`, `category`, `product_name`, `cogs`) |
-| `marketing_spend` | Ad spend tracking (`campaign_id`, `channel`, `spend_date`, `spend_amount`) |
+| `orders` | Transaction details  |
+| `products` | Product catalog & costs  |
+| `marketing_spend` | Ad spend tracking |
 
-
+![BrightCart Database](images/brightcart_db.png)
 ---
 
 ## 1: Database & Schema Setup
