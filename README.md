@@ -41,3 +41,7 @@ This project tackles the following strategic questions for the executive team:
 ## 🛠️ Tools & Technologies Used
 *   **SQL** - *Relational Data Querying*
 
+
+## Documentation & Walkthrough
+* For the complete step-by-step implementation of the project, see [SOLUTION.md](SOLUTION.md).
+

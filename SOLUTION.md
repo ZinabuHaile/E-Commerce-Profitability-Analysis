@@ -6,13 +6,21 @@ This guide provides a complete, step-by-step walkthrough of BrightCart's profita
 ---
 
 ## 📋 Table of Contents
-1. [Data Model Overview](#1-data-model-overview)
-2. [Step 1: Data Preparation & Base Views](#step-1-data-preparation--base-views)
-3. [Step 2: Item-Level Gross Margin Analysis](#step-2-item-level-gross-margin-analysis)
-4. [Step 3: Order-Level Net Profitability & Shipping Erosion](#step-3-order-level-net-profitability--shipping-erosion)
-5. [Step 4: Marketing Attribution & Blended CAC](#step-4-marketing-attribution--blended-cac)
-6. [Step 5: Executive Profitability Summary & Erosion Diagnosis](#step-5-executive-profitability-summary--erosion-diagnosis)
-7. [Key Business Takeaways](#key-business-takeaways)
+
+* [Data Model Overview](#data-model-overview)
+* [1: Database & Schema Setup](#1-database--schema-setup)
+* [Step 1: Data Integrity & Verification](#step-1-data-integrity--verification)
+* [Step 2: Product Category Profitability Analysis](#step-2-product-category-profitability-analysis)
+* [Step 3: Sales Channel Profitability Analysis](#step-3-sales-channel-profitability-analysis)
+* [Step 4: Return Rate & Lost Revenue Analysis](#step-4-return-rate--lost-revenue-analysis)
+* [Step 5: Marketing Spend, CPC, CPA & ROAS Analysis](#step-5-marketing-spend-cpc-cpa--roas-analysis)
+  * [Underperforming Platforms](#underperforming-platforms)
+* [Step 6: Executive Recommendations (20% Budget Cut Target)](#step-6-executive-recommendations-20-budget-cut-target)
+* [Executive Summary & Top 3 Recommendations](#executive-summary--top-3-recommendations)
+  * [Recommendation 1: Re-architect Email Marketing & Cut Active Paid Email Campaigns](#recommendation-1-re-architect-email-marketing--cut-active-paid-email-campaigns)
+  * [Recommendation 2: Reduce Facebook Ads Budget by 50% & Reallocate to TikTok / Influencer](#recommendation-2-reduce-facebook-ads-budget-by-50--reallocate-to-tiktok--influencer)
+  * [Recommendation 3: Eliminate Off-Peak Ad Spend on Google Ads](#recommendation-3-eliminate-off-peak-ad-spend-on-google-ads)
+  * [Total Financial Impact Summary](#total-financial-impact-summary)
 
 ---
 
