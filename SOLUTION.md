@@ -86,16 +86,52 @@ CREATE TABLE IF NOT EXISTS marketing_spend (
     cpa DECIMAL(10,2),
     roas DECIMAL(10,2)
 );
----
 
+
+
+```
 
 ## Step 1: Data Integrity & Verification
 Before running aggregations, verify that cost, revenue, and profit metrics align with standard \ formula logic across all order rows:
-```
+
 **Total Costs** = Product Cost + Shipping Cost + Platform Fee + Transaction Fee
 
 **Net Revenue** = Gross Revenue - Discount Amount - Refund Amount
 
 **Profit** = Net Revenue - Total Costs
 
+```sql
+SELECT 
+    COUNT(*) AS total_orders,
+    SUM(CASE WHEN ABS(total_costs - (product_cost + shipping_cost + platform_fee + transaction_fee)) > 0.01 THEN 1 ELSE 0 END) AS cost_mismatch_count,
+    SUM(CASE WHEN ABS(net_revenue - (gross_revenue - discount_amount - refund_amount)) > 0.01 THEN 1 ELSE 0 END) AS revenue_mismatch_count,
+    SUM(CASE WHEN ABS(profit - (net_revenue - total_costs)) > 0.01 THEN 1 ELSE 0 END) AS profit_mismatch_count
+FROM orders;
+---
 
+```
+Data Health Summary: All 2,000 order records passed verification with 0 calculation mismatches, confirming high financial data reliability.\
+![Data Integrity and Verification](dataintegrity_verification.png)
+
+## Step 2: Product Category Profitability Analysis
+
+This query aggregates revenue, costs, and profit by primary product category to evaluate net profit margins and identify primary profit drivers.\
+
+
+```sql
+SELECT 
+    primary_category,
+    COUNT(order_id) AS total_orders,
+    ROUND(SUM(gross_revenue), 2) AS gross_revenue,
+    ROUND(SUM(net_revenue), 2) AS net_revenue,
+    ROUND(SUM(product_cost), 2) AS total_product_cost,
+    ROUND(SUM(shipping_cost), 2) AS total_shipping_cost,
+    ROUND(SUM(discount_amount), 2) AS total_discounts,
+    ROUND(SUM(total_costs), 2) AS total_costs,
+    ROUND(SUM(profit), 2) AS total_profit,
+    ROUND((SUM(profit) / SUM(net_revenue)) * 100, 2) AS net_profit_margin_pct,
+    ROUND((SUM(shipping_cost) / SUM(gross_revenue)) * 100, 2) AS shipping_to_gross_pct,
+    ROUND((SUM(product_cost) / SUM(gross_revenue)) * 100, 2) AS prod_cost_to_gross_pct
+FROM orders
+GROUP BY primary_category
+ORDER BY net_profit_margin_pct DESC;
