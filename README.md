@@ -3,6 +3,12 @@
 ## Project Link
 This project is based on the [AnalystBuilder E-Commerce Profitability Analysis](https://www.analystbuilder.com/projects/e-commerce-profitability-analysis-KvrTi?tab=details) challenge.
 
+<a href="https://www.analystbuilder.com/projects/e-commerce-profitability-analysis-KvrTi?tab=details" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/AnalystBuilder-Project_Details-orange?style=for-the-badge" alt="AnalystBuilder Project" />
+</a>
+
+[AnalystBuilder - E-Commerce Profitability Analysis Project](https://www.analystbuilder.com/projects/e-commerce-profitability-analysis-KvrTi?tab=details)
+
 ## 📖 Project Overview
 BrightCart is a multi-channel online retailer selling products across eight categories via their website, mobile app, third-party marketplaces, and social commerce platforms. While the company has generated over $1M+ in gross revenue over the past two years, net margins have been steadily shrinking. 
 
